@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom, rgb(99, 99, 185), rgb(231, 232, 236));
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+section {
+    width: 80vw;
+    margin: 5% auto;
+    padding-top: 40;
+    text-align: center;
+    line-height: 25px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+
+/*menu bar*/
+
+.navbar {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 3px rgb(8, 42, 44);
+    box-shadow: 2px 2px 35px 2px blue;
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: larger;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.navbar i {
+    color: rgb(125, 127, 132);
+}
+
+.navbar .menu,
+.navbar .login-menu {
+    display: flex;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar .menu a,
+.navbar .login-menu li {
+    margin-right: 38px;
+    text-decoration: none;
+    color: aqua(75, 75, 44);
+}
+
+
+/* .navbar .login-menu li {
+    margin-right: 38px;
+    text-decoration: none;
+    color: aqua(75, 75, 44);
+} */
