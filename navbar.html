@@ -1,0 +1,59 @@
+<div class="logo">Logo</div>
+<ul class="menu">
+    <li> <a href="./index.html">Home </li>
+    <li> <a href="./Products.html"> Products</li>
+    <li> <a href="./About.html">About</li>
+    <li> <a href="./contactus.html">Contact Us </li>
+</ul>
+<ul class="login-menu"></ul>
+<ul>
+<li> <a href="./sign up.html">Sign up </li>
+<li> <a href="./login.html"> Login</li> 
+</ul>
+<style>.navbar {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 3px rgb(8, 42, 44);
+    box-shadow: 2px 2px 35px 2px blue;
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: larger;
+    align-items: center;
+    letter-spacing: 2px;
+}
+/*menu bar*/
+.navbar i {
+    color: rgb(125, 127, 132);
+}
+
+.navbar .menu,
+.navbar .login-menu {
+    display: flex;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar .menu a,
+.navbar .login-menu li {
+    margin-right: 35px;
+    text-decoration: none;
+    color: aqua(75, 75, 44);
+}
+
+
+/* .navbar .login-menu li {
+    margin-right: 38px;
+    text-decoration: none;
+    color: aqua(75, 75, 44);
+} */</style>
+<script>
+const li = document.querySelectorAll('.menu li')[0]
+li.addEventListener('click',(e)=>{
+    e.preventDefault()
+    alert('Home Clicked')
+    window.location.href='./index.html'
+})
+ </script>
