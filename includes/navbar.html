@@ -1,15 +1,15 @@
 <div class="logo">Logo</div>
 <ul class="menu">
-    <li> <a href="./index.html">Home </li>
-    <li> <a href="./Products.html"> Products</li>
-    <li> <a href="./About.html">About</li>
-    <li> <a href="./contactus.html">Contact Us </li>
+    <li> <a href="../Home.html">Home </li>
+    <li> <a href="../addtocart.html"> Products</li>
+    <li> <a href="../About.html">About</li>
+    <li> <a href="../contactus.html">Contact Us </li>
 </ul>
-<ul class="login-menu"></ul>
-<ul>
-<li> <a href="./sign up.html">Sign up </li>
-<li> <a href="./login.html"> Login</li> 
-</ul>
+<ul class="login-menu">
+    <li> <a href="../sign up.html">Sign up </li>
+    <li> <a href="../login.html"> Login</li>
+     </ul>
+
 <style>.navbar {
     min-height: 10vh;
     display: flex;
@@ -37,7 +37,9 @@
 }
 
 .navbar .menu a,
-.navbar .login-menu li {
+.navbar .login-menu li {   
+     display: flex;
+
     margin-right: 35px;
     text-decoration: none;
     color: aqua(75, 75, 44);
@@ -54,6 +56,6 @@ const li = document.querySelectorAll('.menu li')[0]
 li.addEventListener('click',(e)=>{
     e.preventDefault()
     alert('Home Clicked')
-    window.location.href='./index.html'
+    window.location.href='../home.html'
 })
  </script>
