@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+</body>
+<footer>
+    <footer>
+        <div class="container">
+
+            <!-- About Us Section -->
+            <div>
+                <h4>About Us</h4>
+                <p>We are a leading provider of top-notch electronic products, offering a wide range of gadgets and accessories that cater to your tech needs. Our commitment is to deliver quality and innovation.</p>
+            </div>
+
+            <!-- Services Section -->
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/repair">Device Repair</a></li>
+                    <li><a href="/warranty">Warranty Services</a></li>
+                    <li><a href="/support">Customer Support</a></li>
+                    <li><a href="/shipping">Shipping & Returns</a></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Download Our App Section -->
+            <div class="app-links">
+                <h4>Download Our App</h4>
+                <p>Get our mobile app for the best shopping experience:</p>
+                <a href="https://play.google.com/store" target="_blank"><img src="google-play-badge.png" alt="Google Play Store"></a>
+                <a href="https://www.apple.com/app-store/" target="_blank"><img src="app-store-badge.png" alt="Apple App Store"></a>
+            </div>
+
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <h4>Language</h4>
+                <select id="language-select">
+          <option value="en" selected>English</option>
+          <option value="sw">Swahili</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="zh">中文</option>
+        </select>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="copyright">
+            <p>&copy; 2024 YourCompanyName. All rights reserved.</p>
+        </div>
+        <script>
+            document.getElementById('language-select').addEventListener('change'),
+                function() {
+                    const selectedLanguage = this.value;
+                    alert('Language changed to: ' + selectedLanguage);
+                    0
+                }
+        </script>
+
+</html>
