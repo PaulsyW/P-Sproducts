@@ -5,13 +5,12 @@
     font-family: 'popping', sans-serif;
     font-size: 18px;
 }
-
-body {
+.bodyContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+} 
 
 .header {
     height: 80px;
