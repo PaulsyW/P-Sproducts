@@ -6,55 +6,44 @@ fetch('./includes/navbar.html')
         const parser = newDOMParser();
         const doc = parser.parserFromString(data, 'text/html')
         eval(doc.querySelector('script').textContent)
-    })
+    });
+document.querySelector('.signup-form').addEventListener('submit', function(e) {
+    const password = document.getElementById('password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    const phone = document.getElementById('phone').value;
+    const phonePattern = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
 
-let count = 0;
-let total = 0;
+    if (password !== confirmPassword) {
+        alert('Passwords do not match!');
+        e.preventDefault();
+    }
 
-function addToCart(itemName, itemPrice) {
-    count++;
-    total += itemPrice;
-    document.getElementById('count').textContent = count;
-    document.getElementById('total').textContent = '$' + total.toFixed(2);
-    document.getElementById('cartitem').textContent = itemName;
+    if (!phonePattern.test(phone)) {
+        alert('Phone number must be in the format 123-456-7890');
+        e.preventDefault();
+    }
+});
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var loginButton = document.getElementById("loginButton");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+loginButton.onclick = function() {
+    modal.style.display = "block";
 }
 
-// Example usage:
-addToCart('Example Item', 10.99);
-//form//
-document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('signupModal');
-    const openBtn = document.getElementById('openSignupBtn');
-    const closeBtn = document.querySelector('.close');
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
 
-    openBtn.addEventListener('click', () => {
-        modal.style.display = 'flex';
-    });
-
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
-
-    const form = document.getElementById('signupForm');
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirmPassword').value;
-
-        if (password !== confirmPassword) {
-            alert('Passwords do not match');
-            return;
-        }
-
-        alert('Signup successful');
-        modal.style.display = 'none';
-    });
-});
-//form.....
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
