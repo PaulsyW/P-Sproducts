@@ -47,3 +47,23 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const backgroundContainer = document.getElementById('backgroundContainer');
+    const images = [
+        'image1.jpg',
+        'image2.jpg',
+        'image3.jpg'
+    ];
+    let currentIndex = 0;
+
+    function changeBackgroundImage() {
+        backgroundContainer.style.backgroundImage = `url(${images[currentIndex]})`;
+        currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // Initial background image
+    changeBackgroundImage();
+
+    // Change background image every 5 seconds
+    setInterval(changeBackgroundImage, 5000);
+});
