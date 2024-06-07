@@ -1,276 +1,355 @@
-                                                                * {
-                                                                    margin: 0;
-                                                                    padding: 0%;
-                                                                    box-sizing: border-box;
-                                                                }
-                                                                
-                                                                .background-container {
-                                                                    /* background-image: linear-gradient(to bottom, rgb(243, 243, 248), rgb(61, 92, 217));
+                                                                        * {
+                                                                            margin: 0;
+                                                                            padding: 0%;
+                                                                            box-sizing: border-box;
+                                                                            height: 70av;
+                                                                        }
+                                                                        
+                                                                        .background-container {
+                                                                            /* background-image: linear-gradient(to bottom, rgb(243, 243, 248), rgb(61, 92, 217));
                                                                     background-attachment: fixed;
                                                                     font-family: sans-serif; */
-                                                                    background-image: url("../images/background\ image.jpg");
-                                                                    background-repeat: no-repeat;
-                                                                }
-                                                                
-                                                                section {
-                                                                    width: 80vw;
-                                                                    margin: 5% auto;
-                                                                    padding-top: 40;
-                                                                    text-align: center;
-                                                                    line-height: 25px;
-                                                                }
-                                                                
-                                                                h1 {
-                                                                    margin-bottom: 20px;
-                                                                }
-                                                                
-                                                                footer {
-                                                                    background-color: #bac7d4;
-                                                                    padding: 20px 0;
-                                                                    border-top: 1px solid #e7e7e7;
-                                                                    z-index: 1000;
-                                                                }
-                                                                
-                                                                .container {
-                                                                    max-width: 1200px;
-                                                                    margin: auto;
-                                                                    display: flex;
-                                                                    justify-content: space-between;
-                                                                    flex-wrap: wrap;
-                                                                }
-                                                                
-                                                                .container div {
-                                                                    flex: 1;
-                                                                    padding: 20px;
-                                                                    min-width: 250px;
-                                                                }
-                                                                
-                                                                h4 {
-                                                                    font-size: 18px;
-                                                                    margin-bottom: 15px;
-                                                                    color: #333;
-                                                                }
-                                                                
-                                                                p {
-                                                                    color: #666;
-                                                                    font-size: 14px;
-                                                                    line-height: 1.5;
-                                                                }
-                                                                
-                                                                ul {
-                                                                    list-style: none;
-                                                                    padding: 0;
-                                                                }
-                                                                
-                                                                ul li {
-                                                                    margin-bottom: 10px;
-                                                                }
-                                                                
-                                                                ul li a {
-                                                                    text-decoration: none;
-                                                                    color: #333;
-                                                                    font-size: 14px;
-                                                                    transition: color 0.3s;
-                                                                }
-                                                                
-                                                                ul li a:hover {
-                                                                    color: #007bff;
-                                                                }
-                                                                
-                                                                .app-links img {
-                                                                    width: 120px;
-                                                                    margin-right: 10px;
-                                                                }
-                                                                
-                                                                .language-switcher select {
-                                                                    padding: 5px;
-                                                                    width: 100%;
-                                                                    max-width: 200px;
-                                                                }
-                                                                
-                                                                .copyright {
-                                                                    text-align: center;
-                                                                    padding: 10px 0;
-                                                                    background-color: #e9ecef;
-                                                                    color: #333;
-                                                                    font-size: 14px;
-                                                                }
-                                                                /* Responsive design */
-                                                                
-                                                                @media (max-width: 768px) {
-                                                                    .container {
-                                                                        flex-direction: column;
-                                                                        align-items: center;
-                                                                    }
-                                                                    .container>div {
-                                                                        padding: 20px 0;
-                                                                        text-align: center;
-                                                                    }
-                                                                    .app-links {
-                                                                        display: flex;
-                                                                        justify-content: center;
-                                                                    }
-                                                                }
-                                                                
-                                                                .header {
-                                                                    display: flex;
-                                                                    justify-content: space-between;
-                                                                    align-items: center;
-                                                                    padding: 10px 20px;
-                                                                    background-color: #f0f0f0;
-                                                                }
-                                                                
-                                                                .Logo {
-                                                                    font-weight: bold;
-                                                                }
-                                                                
-                                                                .Cart {
-                                                                    cursor: pointer;
-                                                                }
-                                                                
-                                                                .sidebar {
-                                                                    flex: 0 0 300px;
-                                                                    background-color: #e0e0e0;
-                                                                    padding: 20px;
-                                                                    border-left: 1px solid #ccc;
-                                                                }
-                                                                
-                                                                .head {
-                                                                    border-bottom: 1px solid #ccc;
-                                                                    padding-bottom: 10px;
-                                                                    margin-bottom: 10px;
-                                                                }
-                                                                
-                                                                .foot {
-                                                                    margin-top: 20px;
-                                                                    text-align: right;
-                                                                }
-                                                                /* Media query for smaller screens */
-                                                                
-                                                                @media only screen and (max-width: 768px) {
-                                                                    .container {
-                                                                        flex-direction: column;
-                                                                    }
-                                                                    .sidebar {
-                                                                        flex: 1;
-                                                                        border-left: none;
-                                                                        border-top: 1px solid #ccc;
-                                                                    }
-                                                                }
-                                                                
-                                                                #openSignupBtn {
-                                                                    padding: 10px 20px;
-                                                                    font-size: 16px;
-                                                                    cursor: pointer;
-                                                                }
-                                                                
-                                                                .modal {
-                                                                    display: none;
-                                                                    position: fixed;
-                                                                    z-index: 1;
-                                                                    left: 0;
-                                                                    top: 0;
-                                                                    width: 100%;
-                                                                    height: 100%;
-                                                                    overflow: auto;
-                                                                    background-color: rgba(0, 0, 0, 0.4);
-                                                                    justify-content: center;
-                                                                    align-items: center;
-                                                                }
-                                                                
-                                                                .modal-content {
-                                                                    background-color: #fff;
-                                                                    padding: 20px;
-                                                                    border: 1px solid #888;
-                                                                    width: 300px;
-                                                                    border-radius: 8px;
-                                                                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-                                                                }
-                                                                
-                                                                .close {
-                                                                    color: #aaa;
-                                                                    float: right;
-                                                                    font-size: 28px;
-                                                                    font-weight: bold;
-                                                                    cursor: pointer;
-                                                                }
-                                                                
-                                                                .close:hover,
-                                                                .close:focus {
-                                                                    color: #000;
-                                                                    text-decoration: none;
-                                                                    cursor: pointer;
-                                                                }
-                                                                
-                                                                .container_f {
-                                                                    background-color: #fff;
-                                                                    padding: 20px;
-                                                                    border-radius: 10px;
-                                                                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-                                                                    width: 100%;
-                                                                    max-width: 400px;
-                                                                    text-align: center;
-                                                                }
-                                                                
-                                                                .signup-form h2 {
-                                                                    margin-bottom: 20px;
-                                                                    color: #333;
-                                                                    text-align: center;
-                                                                }
-                                                                
-                                                                .form-group {
-                                                                    margin-bottom: 15px;
-                                                                }
-                                                                
-                                                                .form-group label {
-                                                                    display: block;
-                                                                    margin-bottom: 5px;
-                                                                    color: #555;
-                                                                }
-                                                                
-                                                                .form-group input {
-                                                                    width: 100%;
-                                                                    padding: 10px;
-                                                                    border: 1px solid #ccc;
-                                                                    border-radius: 5px;
-                                                                }
-                                                                
-                                                                .form-group small {
-                                                                    display: block;
-                                                                    margin-top: 5px;
-                                                                    color: #999;
-                                                                }
-                                                                
-                                                                button {
-                                                                    width: 100%;
-                                                                    padding: 10px;
-                                                                    background-color: #007bff;
-                                                                    border: none;
-                                                                    border-radius: 5px;
-                                                                    color: #fff;
-                                                                    font-size: 16px;
-                                                                    cursor: pointer;
-                                                                    transition: background-color 0.3s ease;
-                                                                }
-                                                                
-                                                                button:hover {
-                                                                    background-color: #0056b3;
-                                                                }
-                                                                
-                                                                .background-container {
-                                                                    height: 100vh;
-                                                                    width: 100%;
-                                                                    background-size: cover;
-                                                                    background-position: center;
-                                                                    background-repeat: no-repeat;
-                                                                    display: flex;
-                                                                    justify-content: center;
-                                                                    align-items: center;
-                                                                    transition: background-image 1s ease-in-out;
-                                                                }
-                                                                
-                                                                @media (max-width: 768px) {
-                                                                    .content {
-                                                                        padding: 10px;
-                                                                    }
-                                                                }
+                                                                            background-image: url("../images/storefront-sign-digital-display-sign-electronics-store-futuristic-blue-w-elegant-design_1020495-19055.jpg");
+                                                                            /* background-image: url("../images/background\ image.jpg"); */
+                                                                            background-repeat: no-repeat;
+                                                                            background-size: cover;
+                                                                            filter: brightness(50%);
+                                                                        }
+                                                                        
+                                                                        section {
+                                                                            width: 80vw;
+                                                                            margin: 5% auto;
+                                                                            padding-top: 40;
+                                                                            text-align: center;
+                                                                            line-height: 25px;
+                                                                        }
+                                                                        
+                                                                        h1 {
+                                                                            margin-bottom: 20px;
+                                                                            font-size: 50px;
+                                                                            color: #eef1fa;
+                                                                            margin-top: auto;
+                                                                        }
+                                                                        
+                                                                        footer {
+                                                                            background-color: #2a2f34;
+                                                                            padding: 20px 0;
+                                                                            border-top: 1px solid #e7e7e7;
+                                                                            z-index: 1000;
+                                                                        }
+                                                                        
+                                                                        .container {
+                                                                            max-width: 1200px;
+                                                                            margin: auto;
+                                                                            display: flex;
+                                                                            justify-content: space-between;
+                                                                            flex-wrap: wrap;
+                                                                        }
+                                                                        
+                                                                        .container div {
+                                                                            flex: 1;
+                                                                            padding: 20px;
+                                                                            min-width: 250px;
+                                                                        }
+                                                                        
+                                                                        h4 {
+                                                                            font-size: 18px;
+                                                                            margin-bottom: 15px;
+                                                                            color: #717592;
+                                                                        }
+                                                                        
+                                                                        p {
+                                                                            color: #666;
+                                                                            font-size: 14px;
+                                                                            line-height: 1.5;
+                                                                        }
+                                                                        
+                                                                        ul {
+                                                                            list-style: none;
+                                                                            padding: 0;
+                                                                        }
+                                                                        
+                                                                        ul li {
+                                                                            margin-bottom: 10px;
+                                                                        }
+                                                                        
+                                                                        ul li a {
+                                                                            text-decoration: none;
+                                                                            color: #ee0f0f;
+                                                                            font-size: 20px;
+                                                                            transition: color 0.3s;
+                                                                        }
+                                                                        
+                                                                        ul li a:hover {
+                                                                            color: #007bff;
+                                                                        }
+                                                                        
+                                                                        .app-links img {
+                                                                            width: 120px;
+                                                                            margin-right: 10px;
+                                                                        }
+                                                                        
+                                                                        .language-switcher select {
+                                                                            padding: 5px;
+                                                                            width: 100%;
+                                                                            max-width: 200px;
+                                                                        }
+                                                                        
+                                                                        .copyright {
+                                                                            text-align: center;
+                                                                            padding: 10px 0;
+                                                                            background-color: #3e4246;
+                                                                            color: #a7a1a1;
+                                                                            font-size: 14px;
+                                                                        }
+                                                                        /* Responsive design */
+                                                                        
+                                                                        @media (max-width: 768px) {
+                                                                            .container {
+                                                                                flex-direction: column;
+                                                                                align-items: center;
+                                                                            }
+                                                                            .container>div {
+                                                                                padding: 20px 0;
+                                                                                text-align: center;
+                                                                            }
+                                                                            .app-links {
+                                                                                display: flex;
+                                                                                justify-content: center;
+                                                                            }
+                                                                            .head {
+                                                                                border-bottom: 1px solid #6c5e5e;
+                                                                                padding-bottom: 10px;
+                                                                                margin-bottom: 10px;
+                                                                            }
+                                                                            .foot {
+                                                                                margin-top: 20px;
+                                                                                text-align: right;
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        #openSignupBtn {
+                                                                            padding: 10px 20px;
+                                                                            font-size: 16px;
+                                                                            cursor: pointer;
+                                                                        }
+                                                                        
+                                                                        .modal {
+                                                                            display: none;
+                                                                            position: fixed;
+                                                                            z-index: 1;
+                                                                            left: 0;
+                                                                            top: 0;
+                                                                            width: 100%;
+                                                                            height: 100%;
+                                                                            overflow: auto;
+                                                                            background-color: rgba(0, 0, 0, 0.4);
+                                                                            justify-content: center;
+                                                                            align-items: center;
+                                                                        }
+                                                                        
+                                                                        .modal-content {
+                                                                            background-color: #657fe8;
+                                                                            padding: 20px;
+                                                                            border: 1px solid #888;
+                                                                            width: 300px;
+                                                                            border-radius: 8px;
+                                                                            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                                                                        }
+                                                                        
+                                                                        .close {
+                                                                            color: #aaa;
+                                                                            float: right;
+                                                                            font-size: 28px;
+                                                                            font-weight: bold;
+                                                                            cursor: pointer;
+                                                                        }
+                                                                        
+                                                                        .close:hover,
+                                                                        .close:focus {
+                                                                            color: #000;
+                                                                            text-decoration: none;
+                                                                            cursor: pointer;
+                                                                        }
+                                                                        
+                                                                        .container_f {
+                                                                            background-color: #fff;
+                                                                            padding: 20px;
+                                                                            border-radius: 10px;
+                                                                            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                                                                            width: 100%;
+                                                                            max-width: 400px;
+                                                                            text-align: center;
+                                                                            margin: auto;
+                                                                        }
+                                                                        
+                                                                        .signup-form h2 {
+                                                                            margin-bottom: 20px;
+                                                                            color: #584ac5;
+                                                                            text-align: center;
+                                                                        }
+                                                                        
+                                                                        .form-group {
+                                                                            margin-bottom: 15px;
+                                                                        }
+                                                                        
+                                                                        .form-group label {
+                                                                            display: block;
+                                                                            margin-bottom: 5px;
+                                                                            color: #555;
+                                                                        }
+                                                                        
+                                                                        .form-group input {
+                                                                            width: 100%;
+                                                                            padding: 10px;
+                                                                            border: 1px solid #ccc;
+                                                                            border-radius: 5px;
+                                                                        }
+                                                                        
+                                                                        .form-group small {
+                                                                            display: block;
+                                                                            margin-top: 5px;
+                                                                            color: #999;
+                                                                        }
+                                                                        
+                                                                        button {
+                                                                            width: 100%;
+                                                                            padding: 10px;
+                                                                            background-color: #007bff;
+                                                                            border: none;
+                                                                            border-radius: 5px;
+                                                                            color: #fff;
+                                                                            font-size: 16px;
+                                                                            cursor: pointer;
+                                                                            transition: background-color 0.3s ease;
+                                                                        }
+                                                                        
+                                                                        button:hover {
+                                                                            background-color: #0056b3;
+                                                                        }
+                                                                        
+                                                                        .background-container {
+                                                                            height: 70vh;
+                                                                            width: 100%;
+                                                                            background-size: cover;
+                                                                            background-position: center;
+                                                                            background-repeat: no-repeat;
+                                                                            display: flex;
+                                                                            justify-content: center;
+                                                                            align-items: center;
+                                                                            transition: background-image 1s ease-in-out;
+                                                                        }
+                                                                        
+                                                                        @media (max-width: 768px) {
+                                                                            .content {
+                                                                                padding: 10px;
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        form {
+                                                                            display: flex;
+                                                                            flex-direction: column;
+                                                                            /* font-size: medium; */
+                                                                            align-items: center;
+                                                                        }
+                                                                        
+                                                                        form label {
+                                                                            margin: 5px 0;
+                                                                            max-width: fit-content;
+                                                                            min-height: fit-content;
+                                                                        }
+                                                                        
+                                                                        form input,
+                                                                        form textarea {
+                                                                            margin-bottom: 10px;
+                                                                            padding: 8px;
+                                                                            border: 5px solid #dfdfe5;
+                                                                            border-radius: 10px;
+                                                                            font-size: medium;
+                                                                            width: 600px;
+                                                                        }
+                                                                        
+                                                                        form button {
+                                                                            padding: 10px;
+                                                                            background-color: #186098;
+                                                                            color: white;
+                                                                            border: none;
+                                                                            border-radius: 8px;
+                                                                            cursor: pointer;
+                                                                            font-size: medium;
+                                                                            max-height: fit-content;
+                                                                            max-width: fit-content;
+                                                                        }
+                                                                        
+                                                                        button:hover {
+                                                                            background-color: #9fcb0f;
+                                                                        }
+                                                                        
+                                                                        .moving-statement {
+                                                                            animation: moveStatement 10s infinite alternate;
+                                                                        }
+                                                                        
+                                                                        @keyframes moveStatement {
+                                                                            from {
+                                                                                margin-left: 50px;
+                                                                            }
+                                                                            to {
+                                                                                margin-left: 750px;
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        .transparent-button {
+                                                                            background-color: transparent;
+                                                                            border-color: #1940c2;
+                                                                            padding: 10px 20px;
+                                                                            font-size: 16px;
+                                                                            text-decoration: none;
+                                                                            display: block;
+                                                                            width: 10%;
+                                                                            box-sizing: border-box;
+                                                                            margin-top: 220px;
+                                                                            margin-left: 250px;
+                                                                        }
+                                                                        
+                                                                        .transparent-button:hover {
+                                                                            background-color: rgba(64, 219, 17, 0.2);
+                                                                        }
+                                                                        
+                                                                        */ .button-container {
+                                                                            display: inline-block;
+                                                                            border: 1px solid #e52c2c;
+                                                                            border-radius: 4px;
+                                                                            overflow: hidden;
+                                                                        }
+                                                                        
+                                                                        h4 {
+                                                                            text-align: center;
+                                                                            font-size: larger;
+                                                                            font-weight: bolder;
+                                                                        }
+                                                                        
+                                                                        p4 {
+                                                                            text-align: center;
+                                                                        }
+                                                                        
+                                                                        .cta-button {
+                                                                            display: inline-block;
+                                                                            padding: 10px 20px;
+                                                                            background-color: #d33d10;
+                                                                            color: #fff;
+                                                                            text-decoration: none;
+                                                                            border-radius: 5px;
+                                                                            font-size: 16px;
+                                                                            position: absolute;
+                                                                            left: 10px;
+                                                                            bottom: 20px;
+                                                                            border-radius: 30px;
+                                                                        }
+                                                                        
+                                                                        .cta-button:hover {
+                                                                            background-color: darkorange
+                                                                        }
+                                                                        
+                                                                        body {
+                                                                            height: 70av;
+                                                                        }

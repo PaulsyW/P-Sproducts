@@ -67,3 +67,85 @@ document.addEventListener("DOMContentLoaded", function() {
     // Change background image every 5 seconds
     setInterval(changeBackgroundImage, 5000);
 });
+let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.carousel-item');
+    const totalSlides = slides.length;
+    const visibleSlides = 3; // Number of visible slides at a time
+    const maxIndex = totalSlides - visibleSlides;
+
+    if (index > maxIndex) {
+        currentIndex = maxIndex;
+    } else if (index < 0) {
+        currentIndex = 0;
+    } else {
+        currentIndex = index;
+    }
+
+    document.querySelector('.carousel-inner').style.transform = `translateX(-${currentIndex * (100 / visibleSlides)}%)`;
+}
+
+function next() {
+    showSlide(currentIndex + 1);
+}
+
+function prev() {
+    showSlide(currentIndex - 1);
+}
+
+function buyProduct(product, price) {
+    const mpesaNumber = prompt('Enter your Mpesa number:');
+    if (mpesaNumber) {
+        const referenceNumber = prompt('Enter the reference number:');
+        if (referenceNumber) {
+            alert(`You have successfully purchased ${product} for $${price}.`);
+        } else {
+            alert('Purchase cancelled: Reference number is required.');
+        }
+    } else {
+        alert('Purchase cancelled: Mpesa number is required.');
+    }
+}
+
+// Initialize carousel
+showSlide(currentIndex);
+
+// function searchProducts() {
+//     const input = document.getElementById('searchInput').value.toLowerCase();
+//     const products = document.querySelectorAll('.product-item');
+
+//     products.forEach(product => {
+//         const title = product.querySelector('.product-title').textContent.toLowerCase();
+//         const description = product.querySelector('.product-description').textContent.toLowerCase();
+
+//         if (title.includes(input) || description.includes(input)) {
+//             product.style.display = 'block';
+//         } else {
+//             product.style.display = 'none';
+//         }
+
+//     })
+// }  function searchProducts() {
+const input = document.getElementById('searchInput').value.toLowerCase();
+const products = document.querySelectorAll('.product-item');
+let found = false;
+
+products.forEach(product => {
+    const title = product.querySelector('.product-title').textContent.toLowerCase();
+    const description = product.querySelector('.product-description').textContent.toLowerCase();
+
+    if (title.includes(input) || description.includes(input)) {
+        product.style.display = 'block';
+        if (!found) {
+            found = true;
+            product.scrollIntoView({ behavior: 'smooth' });
+        }
+    } else {
+        product.style.display = 'none';
+    }
+});
+
+if (!found) {
+    alert('No products found.');
+};

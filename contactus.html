@@ -9,62 +9,79 @@
 
     </nav>
     <section>
-        <h1>Welcome.Shop with us</h1>
+        <h4>Welcome.Shop with us PiConic Products</h4>
+        <br>
+
         <p>The best site to find your favourite electronic device</p>
     </section>
     <section>
 
-        <h>Contact Us</h>
-        <P>You can reach us through our call/whatsapp on +254746244199 or visit our social media platforms </P>
+        <h4>Contact Us
+        </h4>
+        <P4>You can reach us through our call/whatsapp on +254746244199 or visit our.social media platforms.You can also send us a message via the form below.we really appreciate your touch with us</P4>
     </section>
     <script src="./js/script.js">
     </script>
 
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
     <footer>
-        <footer>
-            <div class="container">
+        <!-- <footer> -->
+        <div class="container">
 
-                <!-- About Us Section -->
-                <div>
-                    <h4>About Us</h4>
-                    <p>We are a leading provider of top-notch electronic products, offering a wide range of gadgets and accessories that cater to your tech needs. Our commitment is to deliver quality and innovation.</p>
-                </div>
+            <!-- About Us Section -->
+            <div>
+                <h4>About Us</h4>
+                <p>We are a leading provider of top-notch electronic products, offering a wide range of gadgets and accessories that cater to your tech needs. Our commitment is to deliver quality and innovation.</p>
+            </div>
 
-                <!-- Services Section -->
-                <div>
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="/repair">Device Repair</a></li>
-                        <li><a href="/warranty">Warranty Services</a></li>
-                        <li><a href="/support">Customer Support</a></li>
-                        <li><a href="/shipping">Shipping & Returns</a></li>
-                    </ul>
-                </div>
+            <!-- Services Section -->
+            <div>
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/repair">Device Repair</a></li>
+                    <li><a href="/warranty">Warranty Services</a></li>
+                    <li><a href="/support">Customer Support</a></li>
+                    <li><a href="/shipping">Shipping & Returns</a></li>
+                </ul>
+            </div>
 
-                <!-- Quick Links Section -->
-                <div>
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="/products">Products</a></li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                        <li><a href="/faq">FAQ</a></li>
-                    </ul>
-                </div>
+            <!-- Quick Links Section -->
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./addtocart.html">Products</a></li>
+                    <li><a href="./About.html">About Us</a></li>
+                    <li><a href="./contactus.html">Contact Us</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                </ul>
+            </div>
 
-                <!-- Download Our App Section -->
-                <div class="app-links">
-                    <h4>Download Our App</h4>
-                    <p>Get our mobile app for the best shopping experience:</p>
-                    <a href="https://play.google.com/store" target="_blank"><img src="google-play-badge.png" alt="Google Play Store"></a>
-                    <a href="https://www.apple.com/app-store/" target="_blank"><img src="app-store-badge.png" alt="Apple App Store"></a>
-                </div>
+            <!-- Download Our App Section -->
+            <div class="app-links">
+                <h4>Download Our App</h4>
+                <p>Get our mobile app for the best shopping experience:</p>
+                <a href="https://play.google.com/store" target="_blank"><img src="google-play-badge.png" alt="Google Play Store"></a>
+                <a href="https://www.apple.com/app-store/" target="_blank"><img src="app-store-badge.png" alt="Apple App Store"></a>
+            </div>
 
-                <!-- Language Switcher -->
-                <div class="language-switcher">
-                    <h4>Language</h4>
-                    <select id="language-select">
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <h4>Language</h4>
+                <select id="language-select">
                   <option value="en" selected>English</option>
                   <option value="sw">Swahili</option>
                   <option value="es">Español</option>
@@ -72,23 +89,23 @@
                   <option value="de">Deutsch</option>
                   <option value="zh">中文</option>
                 </select>
-                </div>
             </div>
+        </div>
 
-            <!-- Copyright Section -->
-            <div class="copyright">
-                <p>&copy; 2024 YourCompanyName. All rights reserved.</p>
-            </div>
-        </footer>
+        <!-- Copyright Section -->
+        <div class="copyright">
+            <p>&copy; 2024 PiConic Limited Company. All rights reserved.</p>
+        </div>
+    </footer>
 
-        <script>
-            document.getElementById('language-select').addEventListener('change'),
-                function() {
-                    const selectedLanguage = this.value;
-                    alert('Language changed to: ' + selectedLanguage);
-                    0
-                }
-        </script>
+    <script>
+        document.getElementById('language-select').addEventListener('change'),
+            function() {
+                const selectedLanguage = this.value;
+                alert('Language changed to: ' + selectedLanguage);
+                0
+            }
+    </script>
     </footer>
     <script>
         document.getElementById('language-select').addEventListener('change'),
@@ -98,6 +115,7 @@
                 0
             }
     </script>
+
 </body>
 
 </html>
